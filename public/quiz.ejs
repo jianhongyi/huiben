@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>绘本</title>
+    <link rel="stylesheet" href="static/css/reset.css" />
+    <link rel="stylesheet" href="https://cdn-cnc.17zuoye.cn/zion/venus/production/picture/1.0.9/Venus.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = "orientationchange" in window ? "orientationchange" : "resize";
+            var baseSize = 100;
+            var recalc = function () {
+                var width =
+                    docEl.clientWidth / docEl.clientHeight > 1.5 ? docEl.clientHeight : docEl.clientHeight * 0.75;
+                docEl.dataset.width = width;
+                docEl.dataset.percent = baseSize * (width / 750);
+                docEl.style.fontSize = baseSize * (width / 750) + "px";
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <script src="static/js/external.min.js"></script>
+    <% if (['staging', 'production'].indexOf(htmlWebpackPlugin.options.__ENV__) === -1) { %>
+    <script src="https://cdn.bootcss.com/eruda/1.5.8/eruda.min.js"></script>
+    <script>
+        eruda && eruda.init();
+    </script>
+    <% } %>
+    <style type="text/css">
+        @font-face {font-family:readingjourneyChinese;src: url('./static/font/FZLanTYK.TTF')}
+    </style>
+    <style>
+        html,
+        body,
+        #app {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: readingjourneyChinese, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+    <script src="static/js/vue.min.js"></script>
+    <script src="static/js/vuex.min.js"></script>
+    <script src="https://cdn-cnc.17zuoye.cn/zion/venus/production/picture/1.0.9/Venus.umd.min.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

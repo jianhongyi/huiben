@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "allowJs": true,
+        "noEmit": true,
+        "jsx": "preserve",
+        "resolveJsonModule": true,
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "~/*": ["static/*"]
+        },
+        "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}

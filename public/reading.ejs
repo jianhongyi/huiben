@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>绘本</title>
+    <link rel="stylesheet" href="static/css/reset.css" />
+    <script src="static/js/external.min.js"></script>
+    <% if (['development', 'staging', 'production'].indexOf(htmlWebpackPlugin.options.__ENV__) === -1) { %>
+    <script src="https://cdn.bootcss.com/eruda/1.5.8/eruda.min.js"></script>
+    <script>
+        eruda && eruda.init();
+    </script>
+    <% } %>
+    <style type="text/css">
+        @font-face {font-family:readingjourney;src: url('./static/font/FrutigerNextLTW1G-MediumCn.OTF')}
+        @font-face {font-family:readingjourneyChinese;src: url('./static/font/FZLanTYK.TTF')}
+    </style>
+    <script src="static/js/vue.min.js"></script>
+    <script src="static/js/vuex.min.js"></script>
+</head>
+
+<body>
+    <div style="font-family: readingjourney;font-size:0px;">add</div>
+    <div style="font-family: readingjourney;font-size:0px;font-weight:bold">addbold</div>
+    <div style="font-family: readingjourneyChinese;font-size:0px;">一</div>
+    <div style="font-family: readingjourneyChinese;font-size:0px;font-weight:bold">二</div>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+/build/
+/dist/
+/test/unit/coverage/
+/config/
+/static/
+/public/
+/src/types/
+*.min.js
